@@ -1,0 +1,50 @@
+MDScreen:
+    name: 'first'
+    MDFloatLayout:
+        size: root.width, root.height
+        #FitImage:
+         #   size_hint_y: 1
+          #  pos_hint: {"center_x": 0.5,"center_y": 1.2}
+         #   source: 'hjk.png'
+            #radius: 36, 36, 0, 0
+        FitImage:
+            size_hint_y: 1
+            pos_hint: {"center_x": 0.5,"center_y": 0.4}
+            source: 'tt.jpg'
+            radius: 36, 36, 0, 0
+            
+        
+      
+
+        MDCard:
+            size_hint: None, None
+            size: 280, 150
+            pos_hint: {"center_x": 0.5,"center_y": 0.5}
+            elevation: 10
+            outlined: 50
+            halign: 'center'
+            padding: 25
+            spacing: 10
+            orientation: 'vertical'
+            radius: dp(10)
+            MDRoundFlatButton:
+                text: "[b]Inflemncer[/b]"
+                size_hint: 0.9, None
+                font_size: 15
+                pos_hint: {"center_x":0.5}
+                #text_color: 0, 0, 0, 0
+                md_bg_color: 1, 0, 0, 1
+                on_release: 
+                    app.root.current = "inf"
+                    root.manager.transition.direction = 'right'
+
+            MDRoundFlatButton:
+                text: "[b]company[/b]"
+                size_hint: 0.9, None
+                font_size: 15
+                pos_hint: {"center_x":0.5}
+                #text_color: 0, 0, 0, 0
+                md_bg_color: 1, 0, 0, 1
+                on_release: 
+                    app.root.current = "com"
+                    root.manager.transition.direction = 'right'

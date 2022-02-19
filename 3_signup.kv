@@ -1,0 +1,137 @@
+MDScreen:
+    name: 'signup'
+    MDFloatLayout:
+        size: root.width, root.height
+        #FitImage:
+         #   size_hint_y: 1
+          #  pos_hint: {"center_x": 0.5,"center_y": 1.2}
+         #   source: 'hjk.png'
+            #radius: 36, 36, 0, 0
+        FitImage:
+            size_hint_y: 1
+            pos_hint: {"center_x": 0.5,"center_y": 0.4}
+            source: 'tt.jpg'
+            radius: 36, 36, 0, 0
+
+        MDCard:
+            size_hint: None, None
+            size: 280, 580
+            pos_hint: {"center_x": 0.5,"center_y": 0.5}
+            elevation: 10
+            outlined: 50
+            halign: 'center'
+            padding: 25
+            spacing: 10
+            orientation: 'vertical'
+            radius: dp(10)
+
+            MDLabel:
+                id: "label"
+                text: "welcome"
+                font_name: 'hhh'
+                font_size: 150
+                halign: 'center'
+                #height: 0
+                #size_hint_y:1
+                height: self.texture_size[1]
+                pos_hint: {"center_x":0.5, "center_y":1}
+                #padding_y: 0
+               
+
+            MDTextField:
+                hint_text: "Mobile Number/Email"
+                mode: "rectangle"
+                id: user
+                icon_right: "account"
+                size_hint_x: None
+                width: 200
+                font_size: 18
+                pos_hint: {"center_x": 0.5}
+            
+            MDTextField:
+                hint_text: "Full Name"
+                mode: "rectangle"
+                id: user
+                icon_right: "account"
+                size_hint_x: None
+                width: 200
+                font_size: 18
+                pos_hint: {"center_x": 0.5}
+            MDTextField:
+                hint_text: "Username"
+                mode: "rectangle"
+                id: user
+                icon_right: "account"
+                size_hint_x: None
+                width: 200
+                font_size: 18
+                pos_hint: {"center_x": 0.5}
+
+            MDTextField:
+                id: userp
+                mode: "rectangle"
+                hint_text: "password"
+                icon_right: "eye-off"
+                size_hint_x: None
+                width: 200
+                font_size: 18
+                pos_hint: {"center_x": 0.5}
+                password: True
+
+            MDRoundFlatButton:
+                text: "[b]log in[/b]"
+                size_hint: 0.9, None
+                font_size: 15
+                pos_hint: {"center_x":0.5}
+                #text_color: 0, 0, 0, 0
+                md_bg_color: 1, 0, 0, 1
+
+            MDLabel:
+                id: "label1"
+                text: "or"
+                font_size: 10
+                halign: 'center'
+                size_hint_y:None
+                height: self.texture_size[1]
+                padding_y:
+            MDBoxLayout: 
+                size: 20,10
+                size_hint_x: 0.9
+                size_hint_y: None
+                height: self.minimum_height
+                pos_hint: {"center_x":0.5, "center_y":0.5}
+                
+                MDLabel:
+                    id: "label2"
+                    text: "Already have an account?"
+                    font_size: 13
+                    size_hint_x: 1.9
+                    halign: 'center'
+                    pos_hint: {'center_y':0.5}
+                    
+                    #height: self.texture_size[1]
+
+                MDTextButton:
+                    text: "sign in"
+                    #text: "[color=#92c171][font=Roboto][b]SignUp[/b][/font][/color]"
+                    font_size: 12
+                    bold: True
+                    size_hint_x: 0.7
+                    custom_color: self.theme_cls.primary_palette
+                    
+                    theme_text_color: "Custom"
+                    text_color: 77/255,219/255,255/255,1
+                    #font_size: 12
+                    pos_hint: {"center_x":0.8, "center_y":0.5}
+                    on_release: 
+                        app.root.current = "Main"
+                        root.manager.transition.direction = 'right'
+
+            
+
+             
+                
+
+            Widget:
+                size_hint_y: None
+                height: 30
